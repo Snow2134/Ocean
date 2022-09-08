@@ -4,3 +4,14 @@ local Window = Library.CreateLib("Ocean", "Ocean")
 -- MAIN
 local Main = Window:NewTab("Main")
 local MainSection = Main:NewSection("Fly")
+
+
+MainSection:NewToggle("Super Human", "Makes you jump and walk faster", function(state)
+    if state then
+     game.Players.LocalPlayer.Character.Humanoid.Walkspeed  = 120
+     game.Players.LocalPlayer.Character.Humanoid.Jumpower = 120
+else
+     game.Players.LocalPlayer.Character.Humanoid.Walkspeed  = 16
+     game.Players.LocalPlayer.Character.Humanoid.Jumpower = 50
+    end
+end)
