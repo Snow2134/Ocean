@@ -1,17 +1,16 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Ocean", "Ocean")
 
+if game.PlaceId == 2788229376 then
+
 -- MAIN
 local Main = Window:NewTab("Main")
-local MainSection = Main:NewSection("Fly")
+local MainSection = Main:NewSection("Main")
+    
+    
+ MainSection:NewButton("Bypassed Fly", "bird mode", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))() 
 
-
-MainSection:NewToggle("Super Human", "Makes you jump and walk faster", function(state)
-    if state then
-     game.Players.LocalPlayer.Character.Humanoid.Walkspeed  = 120
-     game.Players.LocalPlayer.Character.Humanoid.Jumpower = 120
-else
-     game.Players.LocalPlayer.Character.Humanoid.Walkspeed  = 16
-     game.Players.LocalPlayer.Character.Humanoid.Jumpower = 50
-    end
-end)
+        Fly(true)
+    end)
+end
