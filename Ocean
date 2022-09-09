@@ -8,9 +8,11 @@ local Main = Window:NewTab("Main")
 local MainSection = Main:NewSection("Main")
     
     
- MainSection:NewButton("Bypassed Fly", "bird mode", function()
+ MainSection:NewButton("Fly", "Press x to stop flying", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Nicuse/RobloxScripts/main/BypassedFly.lua"))() 
 
         Fly(true)
     end)
 end
+
+
