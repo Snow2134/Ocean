@@ -16,3 +16,11 @@ local MainSection = Main:NewSection("Main")
 end
 
 
+MainSection:NewButton("Flash", "Walk as Fast as the flash", function()
+    
+end)
+
+
+MainSection:NewSlider("Walkspeed", "SPEED!!", 500, 16, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
